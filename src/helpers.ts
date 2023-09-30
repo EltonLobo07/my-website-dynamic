@@ -1,3 +1,8 @@
+import { 
+    ColorTheme, 
+    constants 
+} from "~/constants";
+
 function formatClassName(className: string): string {
     const stack: string[] = [];
     const specialChars = new Set(["\n", "\t", " "]);
@@ -19,6 +24,14 @@ function formatClassName(className: string): string {
     return stack.join("");
 }
 
+function isColorTheme(value: unknown): value is ColorTheme {
+    return (
+        typeof value === "string" &&
+        constants.colorTheme.findIndex(tVal => tVal === value) > 0
+    );
+}
+
 export const helpers = {
-    formatClassName
+    formatClassName,
+    isColorTheme
 };
