@@ -6,7 +6,25 @@ import { twMerge } from "tailwind-merge";
 import { useColorThemeContext } from "~/custom-hooks/useColorThemeContext";
 import { helpers } from "~/helpers";
 
-type Props = Omit<Parameters<typeof Link>[0], "ref">;
+/*
+    ${
+                            colorTheme === "light" 
+                            ? addActiveStyle
+                              ? "text-black"
+                              : "text-argent" 
+                            : addActiveStyle
+                              ? "text-white"
+                              : "text-charmed-chalice"
+                        }
+*/
+
+type Props = 
+    Omit<Parameters<typeof Link>[0], "ref"> & 
+    {
+        addActiveStyle?: boolean,
+        addHoverStyle?: boolean,
+        addFocusStyle?: boolean
+    };
 
 export function NavLink(props: Props) {
     const pathname = usePathname();
@@ -15,35 +33,51 @@ export function NavLink(props: Props) {
     const isCurLinkActive = pathname === props.href;
     const lightTheme = colorTheme === "light";
 
+    const {
+        addActiveStyle: addActiveStyleProp,
+        addHoverStyle,
+        addFocusStyle,
+        ...otherProps
+    } = props;
+
+    const addActiveStyle = isCurLinkActive && addActiveStyleProp;
+
     return (
         <Link 
-            {...props}
+            {...otherProps}
             className = {twMerge(
                 helpers.formatClassName(
                     `
                         inline-block
-                        text-xl
-                        font-semibold
                         capitalize
                         border-b
                         ${
                             colorTheme === "light" 
-                            ? isCurLinkActive
+                            ? addActiveStyle
                               ? "text-black"
                               : "text-argent" 
-                            : isCurLinkActive
+                            : addActiveStyle
                               ? "text-white"
                               : "text-charmed-chalice"
                         }
                         ${
-                            isCurLinkActive
+                            addActiveStyle
                             ? "border-current"
                             : "border-transparent"
                         }
                         ${
-                            lightTheme
-                            ? "hover:text-black"
-                            : "hover:text-white"
+                            addHoverStyle
+                            ? lightTheme
+                              ? "hover:text-black"
+                              : "hover:text-white"
+                            : ""
+                        }
+                        ${
+                            addFocusStyle
+                            ? lightTheme
+                                ? "focus:text-black"
+                                : "focus:text-white"
+                            : ""
                         }
                     `
                 ),

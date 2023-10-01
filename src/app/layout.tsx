@@ -10,9 +10,8 @@ import { RootHeader } from "~/components/RootHeader";
 import { styles } from "~/styles";
 import { ToggleColorThemeBtn } from "~/components/ToggleColorThemeBtn";
 import { VerticalLayoutSeparator } from "~/components/VerticalLayoutSeparator";
-import { NavMenuBtn } from "~/components/NavMenuBtn";
-import { ModalVisibleContextProvider } from "~/components/ModalVisibleContextProvider";
 import { PathHeading } from "~/components/PathHeading";
+import { RootNavMenu } from "~/components/RootNavMenu";
 
 const lora = Lora({ 
   subsets: ["latin"], 
@@ -52,6 +51,7 @@ export default function RootLayout(props: Props) {
 						${lora.className}
 						h-full
 						relative
+						isolate
 					`
 				)}
 			>
@@ -63,94 +63,96 @@ export default function RootLayout(props: Props) {
 				<ColorThemeContextProvider
 					initialColorTheme = {initialColorTheme}
 				>
-					<ModalVisibleContextProvider>
-						<div
-							className = {helpers.formatClassName(
-								`
-									${styles.tw.maxWidthWrapper}
-									h-full
-									flex
-									laptopAndUp:gap-x-10
-								`
-							)}
-						>
-								<RootHeader
+					
+					<div
+						className = {helpers.formatClassName(
+							`
+								${styles.tw.maxWidthWrapper}
+								h-full
+								flex
+								laptopAndUp:gap-x-10
+							`
+						)}
+					>
+							<RootHeader
+								className = {helpers.formatClassName(
+									`
+										hidden laptopAndUp:block
+										my-auto
+										max-h-full
+										px-16px
+										overflow-y-auto
+										flex-shrink-0
+										${commonVerticalPadding}
+									`
+								)}
+							/>
+							<VerticalLayoutSeparator 
+								className = {helpers.formatClassName(
+									`
+										hidden laptopAndUp:block
+									`
+								)}
+							/>
+							<main
+								className = {helpers.formatClassName(
+									`
+										my-auto
+										flex-grow
+										max-h-full
+										overflow-y-auto
+										flex
+										flex-col
+										gap-y-4
+										${commonVerticalPadding}
+									`
+								)}
+							>
+								<div
 									className = {helpers.formatClassName(
 										`
-											hidden laptopAndUp:block
-											my-auto
-											max-h-full
-											px-16px
-											overflow-y-auto
 											flex-shrink-0
-											${commonVerticalPadding}
-										`
-									)}
-								/>
-								<VerticalLayoutSeparator 
-									className = {helpers.formatClassName(
-										`
-											hidden laptopAndUp:block
-										`
-									)}
-								/>
-								<main
-									className = {helpers.formatClassName(
-										`
-											my-auto
-											flex-grow
-											max-h-full
-											overflow-y-auto
 											flex
-											flex-col
-											gap-y-4
-											${commonVerticalPadding}
+											gap-4
+											relative
+											items-center
+											pl-16px
+											flex-wrap
 										`
 									)}
 								>
+									<PathHeading 
+										className = {helpers.formatClassName(
+											`
+												laptopAndUp:hidden
+											`
+										)}
+									/>
 									<div
 										className = {helpers.formatClassName(
 											`
-												flex-shrink-0
+												ml-auto
 												flex
-												gap-4
-												relative
-												items-center
-												pl-16px
-												flex-wrap
+												gap-x-[16px]
+												pr-[2px]
 											`
 										)}
 									>
-										<PathHeading 
+										<ToggleColorThemeBtn />
+										<RootNavMenu 
 											className = {helpers.formatClassName(
 												`
 													laptopAndUp:hidden
+													relative
+													z-10
 												`
 											)}
 										/>
-										<div
-											className = {helpers.formatClassName(
-												`
-													ml-auto
-													flex
-													gap-x-[16px]
-												`
-											)}
-										>
-											<ToggleColorThemeBtn />
-											<NavMenuBtn 
-												className = {helpers.formatClassName(
-													`
-														laptopAndUp:hidden
-													`
-												)}
-											/>
-										</div>
 									</div>
-									{props.children}
-								</main>
-						</div>
-					</ModalVisibleContextProvider>
+								</div>
+								{props.children}
+							</main>
+					</div>
 				</ColorThemeContextProvider>
 			</body>
 		</html>

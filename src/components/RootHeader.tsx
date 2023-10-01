@@ -36,6 +36,14 @@ export function RootHeader(props: Props) {
                                 >
                                     <NavLink
                                         href = {path}
+                                        addActiveStyle
+                                        addHoverStyle
+                                        className = {helpers.formatClassName(
+                                            `
+                                                text-xl
+                                                font-semibold
+                                            `
+                                        )}
                                     >
                                         {name}
                                     </NavLink>
