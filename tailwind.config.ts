@@ -64,6 +64,9 @@ const config: Config = {
         "disco-ball": "#D4D4D4",
         "young-night": "#232323",
         "white-edgar": "#EDEDED",
+        "squant": "#666666",
+        "cynical-black": "#171717",
+        
         /*
         "stonewall-gray": "#C1C1C1",
         "beluga": "#F1F1F1",

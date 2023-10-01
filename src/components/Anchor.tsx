@@ -36,8 +36,8 @@ export function Anchor(props: Props) {
                     aria-hidden
                     className = {helpers.formatClassName(
                         `
-                            w-[16px]
-                            h-[16px]
+                            w-[1em]
+                            h-[1em]
                         `
                     )} 
                 />
@@ -59,6 +59,7 @@ export function Anchor(props: Props) {
                         items-center
                         border-b
                         border-transparent hover:border-current
+                        whitespace-nowrap
                         ${
                             colorTheme === "light"
                             ? "text-blue-600"

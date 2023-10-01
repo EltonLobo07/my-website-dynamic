@@ -37,7 +37,14 @@ const tw = {
             value: roundedBtnThemeDependent,
             hover: roundedBtnThemeDependentHover
         }
-    }
+    },
+    pageRoot: helpers.formatClassName(
+        `
+            flex-grow
+            overflow-y-auto
+            px-16px
+        `
+    )
 };
 
 export const styles = {

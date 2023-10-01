@@ -29,9 +29,7 @@ export default function RootPage() {
 			className = {helpers.formatClassName(
 				`
 					relative
-					flex-grow
-					overflow-y-auto
-					px-16px
+					${styles.tw.pageRoot}
 					flex
 					flex-col
 					gap-y-8
