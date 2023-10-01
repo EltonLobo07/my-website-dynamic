@@ -1,4 +1,3 @@
-import { twMerge } from "tailwind-merge";
 import { NavLink } from "~/components/NavLink";
 import { constants } from "~/constants";
 import { helpers } from "~/helpers";
@@ -9,13 +8,7 @@ export function RootHeader(props: Props) {
     return (
         <header
             {...props}
-            className = {twMerge(
-                helpers.formatClassName(
-                    `
-                    `
-                ),
-                props.className
-            )}
+            className = {props.className}
         >
             <nav>
                 <ul>

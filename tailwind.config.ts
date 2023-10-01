@@ -12,6 +12,19 @@ const config: Config = {
       "laptopAndUp": "68.75rem", // 1100px
     },
     extend: {
+      animation: {
+        wave: "wave 1s ease-in-out infinite alternate"
+      },
+      keyframes: {
+          wave: {
+            "0%": {
+              transform: "rotate(0turn)"
+            },
+            "100%": {
+              transform: "rotate(0.05turn)"
+            }
+          }
+      },
       padding: {
         "8px": "8px",
         "16px": "16px",
@@ -48,6 +61,9 @@ const config: Config = {
         "carbon": "#333",
         "plaster": "#EAEAEA",
         "argent": "#888888",
+        "disco-ball": "#D4D4D4",
+        "young-night": "#232323",
+        "white-edgar": "#EDEDED",
         /*
         "stonewall-gray": "#C1C1C1",
         "beluga": "#F1F1F1",

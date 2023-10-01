@@ -6,18 +6,6 @@ import { twMerge } from "tailwind-merge";
 import { useColorThemeContext } from "~/custom-hooks/useColorThemeContext";
 import { helpers } from "~/helpers";
 
-/*
-    ${
-                            colorTheme === "light" 
-                            ? addActiveStyle
-                              ? "text-black"
-                              : "text-argent" 
-                            : addActiveStyle
-                              ? "text-white"
-                              : "text-charmed-chalice"
-                        }
-*/
-
 type Props = 
     Omit<Parameters<typeof Link>[0], "ref"> & 
     {

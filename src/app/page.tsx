@@ -1,17 +1,212 @@
+"use client";
+
+import { Anchor } from "~/components/Anchor";
+import { ExternalLink } from "~/components/icons/ExternalLink";
+import { Github } from "~/components/icons/Github";
+import { Mail } from "~/components/icons/Mail";
+import { useColorThemeContext } from "~/custom-hooks/useColorThemeContext";
 import { helpers } from "~/helpers";
+import { styles } from "~/styles";
 
 export default function RootPage() {
+	const colorTheme = useColorThemeContext()[0];
+
+	const lightTheme = colorTheme === "light";
+	const mainSectionTitle = "introduction and relevant links";
+	const introductionSectionTitle = "introduction";
+	const emailAndGithubSectionTile = "Email address & github information";
+	const commonEmailAndGithubClassName = helpers.formatClassName(
+		`
+			flex
+			gap-x-2
+			items-center
+		`
+	);
+
 	return (
-		<div
+		<section
+			aria-label = {mainSectionTitle}
 			className = {helpers.formatClassName(
 				`
+					relative
 					flex-grow
 					overflow-y-auto
 					px-16px
+					flex
+					flex-col
+					gap-y-8
 				`
 			)}
 		>
-			Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem incidunt natus eligendi unde culpa odit est a impedit. Laborum cum, assumenda natus, saepe tenetur similique amet quam labore quo, consequuntur eaque et non quas! Deleniti natus, asperiores nostrum sapiente ratione placeat voluptatum possimus aspernatur fugit alias quis eligendi dolorum odit nesciunt excepturi eaque. Dolorum modi pariatur voluptas cumque at, totam, sed error vel alias, sunt suscipit rem ipsam facilis tempora. Quia commodi dolore ex, minima esse voluptatum praesentium, explicabo maxime deleniti quis labore atque, totam facilis accusamus fuga. Recusandae, rem assumenda, exercitationem totam culpa voluptatum nemo repellat obcaecati fugiat aut ratione! Officiis sed, corrupti blanditiis esse tempore impedit non ipsa dolorum qui praesentium? Eum fugit sit eveniet voluptas dolor vero. Architecto maxime dolorum voluptatem odio temporibus, molestias, error accusamus facere qui sed hic totam? Laborum quidem placeat quasi suscipit magni et, a nam, fuga laboriosam aspernatur quis provident velit. Sunt, nulla culpa at eaque, excepturi libero repellendus commodi magni ducimus harum dicta, praesentium quaerat ipsam. Totam quas in quaerat, earum ipsa harum repellendus voluptatem minima quia! Quisquam, autem! Impedit illum aliquam distinctio nesciunt, fugiat aperiam molestias quos error, maxime perferendis odio eligendi eos ad aspernatur! Perspiciatis error aspernatur sunt. Distinctio debitis ipsa quae adipisci beatae. Vero suscipit provident minima ratione totam quam nobis, amet consequuntur iusto aut placeat blanditiis? Voluptates alias magnam hic iste illo eos earum, optio, vero maiores ipsam eum magni non dicta ut suscipit unde laborum nobis! Dignissimos, nemo accusantium eius odit consectetur labore temporibus ex sint assumenda possimus deserunt cum inventore impedit! Cumque dignissimos exercitationem vel assumenda vitae, aspernatur ipsa ab distinctio non fugiat dolore error odio consectetur alias quae accusamus rem, sapiente nostrum nihil, quasi dolorem facere in illo repudiandae! Obcaecati quae, numquam ratione cupiditate facere maiores soluta tempore nulla natus consequuntur veniam quidem quam iure aliquid enim, consequatur adipisci debitis ipsum ad quis. Maxime officia ea repellendus illum aut ratione voluptates ducimus nihil nemo nisi deserunt culpa debitis ad repellat, accusantium ipsum eaque odit dicta inventore. Aliquam excepturi adipisci numquam magni natus ab consequatur eveniet illo nesciunt est. Recusandae, velit iure voluptatibus corporis officia sunt, nam magnam eum aliquid maxime possimus nisi tempora animi repellat reprehenderit fugit, totam eaque incidunt! Quis quae cumque magnam eligendi magni obcaecati ex, quaerat vero deserunt veritatis nam error voluptatem laborum cum iure laudantium suscipit eius iste quibusdam modi! Ut dicta officiis aliquam dolor voluptates qui laboriosam sequi autem doloribus perspiciatis asperiores nihil eligendi quo possimus quasi quisquam, doloremque id vel accusamus atque, iste sapiente? Eum provident numquam illo expedita sint eveniet nam id similique deserunt nesciunt quo et facilis non temporibus, illum pariatur, quis quas rem perspiciatis reprehenderit maxime iste exercitationem. Ducimus accusantium veritatis aut? Ex sit officiis nihil est corrupti harum a perspiciatis praesentium, magni eos, libero exercitationem quo repudiandae dolor? Unde, consequatur esse. Officiis labore, quo ex, mollitia dolores debitis culpa ad voluptatum sunt cumque temporibus dolore hic, delectus est. Debitis, sapiente nisi! Libero tempore esse tempora molestiae reiciendis eaque quibusdam, corrupti labore culpa. Ut, perferendis.
-		</div>
+			<h3
+				style = {styles.visuallyHidden}
+			>
+				{mainSectionTitle}
+			</h3>
+			<section
+				aria-label = {introductionSectionTitle}
+				className = {helpers.formatClassName(
+					`
+						relative
+						mt-auto
+						flex
+						flex-col
+						gap-y-5
+					`
+				)}
+			>
+				<h4
+					style = {styles.visuallyHidden}
+				>
+					{introductionSectionTitle}
+				</h4>
+				<p
+					className = {helpers.formatClassName(
+						`
+							flex
+							flex-wrap
+							gap-x-3
+							gap-y-2
+							items-center
+							text-3xl
+							font-medium
+						`
+					)}
+				>
+					<span
+						role = "img"
+						aria-label = "waving hand"
+						className = {helpers.formatClassName(
+							`
+								inline-block
+								animate-wave
+								origin-[80%_90%]
+							`
+						)}
+					>
+						👋
+					</span>
+					<span>
+						I&apos;m
+					</span>
+					<span
+						className = {helpers.formatClassName(
+							`
+								text-irrigo-purple
+							`
+						)}
+					>
+						Elton Lobo
+					</span>
+				</p>
+				<p
+					className = {helpers.formatClassName(
+						`
+							text-disco-ball
+							${
+								lightTheme
+								? "text-young-night"
+								: "text-white-edgar"
+							}
+						`
+					)}
+				>
+					I&apos;m a software developer from India who spends most of the time focusing on the front end of a software product&apos;s technology stack. I&apos;m currently unemployed and am looking to join a team as a software developer. I have manily written web apps and websites using 
+					<Anchor
+						target = "_blank"
+						href = "https://react.dev/"
+					>
+						React
+					</Anchor>
+					, but I am motivated to work on problems that require me to create good technical solutions.
+				</p>
+				<Anchor
+					target = "_blank"
+					href = "#"
+					className = {helpers.formatClassName(
+						`
+							capitalize
+							w-fit
+						`
+					)}
+				>
+					view résumé
+				</Anchor>
+			</section>
+			<section
+				aria-label = {emailAndGithubSectionTile}
+				className = {helpers.formatClassName(
+					`
+						relative
+						mb-auto
+						flex
+						flex-col
+						gap-y-3
+					`
+				)}
+			>
+				<h4
+					style = {styles.visuallyHidden}
+				>
+					{emailAndGithubSectionTile}
+				</h4>
+				<p
+					className = {helpers.formatClassName(
+						`
+							relative
+							${commonEmailAndGithubClassName}
+						`
+					)}
+				>
+					<span
+						style = {styles.visuallyHidden}
+					>
+						my email address
+					</span>
+					<Mail 
+						aria-hidden
+					/>
+					<span>
+						eltonsw00@gmail.com
+					</span>
+				</p>
+				<a
+					target = "_blank"
+					href = "https://github.com/EltonLobo07"
+					className = {helpers.formatClassName(
+						`
+							relative
+							w-fit
+							${commonEmailAndGithubClassName}
+							border-b
+							border-transparent hover:border-current
+							${
+								lightTheme
+								? "text-blue-600"
+								: "text-blue-400"
+							}
+						`
+					)}
+				>
+					<Github 
+						aria-hidden
+					/>
+					<span
+						aria-hidden
+					>
+						My Github profile
+					</span>
+					<ExternalLink 
+						aria-hidden
+						className = {helpers.formatClassName(
+							`
+								w-[16px]
+								h-[16px]
+							`
+						)}
+					/>
+				</a>
+			</section>
+		</section>
 	);
 }
