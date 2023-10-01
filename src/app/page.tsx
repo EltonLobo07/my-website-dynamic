@@ -1,7 +1,17 @@
+import { helpers } from "~/helpers";
+
 export default function RootPage() {
 	return (
-		<>
-		
-		</>
+		<div
+			className = {helpers.formatClassName(
+				`
+					flex-grow
+					overflow-y-auto
+					px-16px
+				`
+			)}
+		>
+			Lorem ipsum dolor sit amet consectetur adipisicing elit. Exercitationem incidunt natus eligendi unde culpa odit est a impedit. Laborum cum, assumenda natus, saepe tenetur similique amet quam labore quo, consequuntur eaque et non quas! Deleniti natus, asperiores nostrum sapiente ratione placeat voluptatum possimus aspernatur fugit alias quis eligendi dolorum odit nesciunt excepturi eaque. Dolorum modi pariatur voluptas cumque at, totam, sed error vel alias, sunt suscipit rem ipsam facilis tempora. Quia commodi dolore ex, minima esse voluptatum praesentium, explicabo maxime deleniti quis labore atque, totam facilis accusamus fuga. Recusandae, rem assumenda, exercitationem totam culpa voluptatum nemo repellat obcaecati fugiat aut ratione! Officiis sed, corrupti blanditiis esse tempore impedit non ipsa dolorum qui praesentium? Eum fugit sit eveniet voluptas dolor vero. Architecto maxime dolorum voluptatem odio temporibus, molestias, error accusamus facere qui sed hic totam? Laborum quidem placeat quasi suscipit magni et, a nam, fuga laboriosam aspernatur quis provident velit. Sunt, nulla culpa at eaque, excepturi libero repellendus commodi magni ducimus harum dicta, praesentium quaerat ipsam. Totam quas in quaerat, earum ipsa harum repellendus voluptatem minima quia! Quisquam, autem! Impedit illum aliquam distinctio nesciunt, fugiat aperiam molestias quos error, maxime perferendis odio eligendi eos ad aspernatur! Perspiciatis error aspernatur sunt. Distinctio debitis ipsa quae adipisci beatae. Vero suscipit provident minima ratione totam quam nobis, amet consequuntur iusto aut placeat blanditiis? Voluptates alias magnam hic iste illo eos earum, optio, vero maiores ipsam eum magni non dicta ut suscipit unde laborum nobis! Dignissimos, nemo accusantium eius odit consectetur labore temporibus ex sint assumenda possimus deserunt cum inventore impedit! Cumque dignissimos exercitationem vel assumenda vitae, aspernatur ipsa ab distinctio non fugiat dolore error odio consectetur alias quae accusamus rem, sapiente nostrum nihil, quasi dolorem facere in illo repudiandae! Obcaecati quae, numquam ratione cupiditate facere maiores soluta tempore nulla natus consequuntur veniam quidem quam iure aliquid enim, consequatur adipisci debitis ipsum ad quis. Maxime officia ea repellendus illum aut ratione voluptates ducimus nihil nemo nisi deserunt culpa debitis ad repellat, accusantium ipsum eaque odit dicta inventore. Aliquam excepturi adipisci numquam magni natus ab consequatur eveniet illo nesciunt est. Recusandae, velit iure voluptatibus corporis officia sunt, nam magnam eum aliquid maxime possimus nisi tempora animi repellat reprehenderit fugit, totam eaque incidunt! Quis quae cumque magnam eligendi magni obcaecati ex, quaerat vero deserunt veritatis nam error voluptatem laborum cum iure laudantium suscipit eius iste quibusdam modi! Ut dicta officiis aliquam dolor voluptates qui laboriosam sequi autem doloribus perspiciatis asperiores nihil eligendi quo possimus quasi quisquam, doloremque id vel accusamus atque, iste sapiente? Eum provident numquam illo expedita sint eveniet nam id similique deserunt nesciunt quo et facilis non temporibus, illum pariatur, quis quas rem perspiciatis reprehenderit maxime iste exercitationem. Ducimus accusantium veritatis aut? Ex sit officiis nihil est corrupti harum a perspiciatis praesentium, magni eos, libero exercitationem quo repudiandae dolor? Unde, consequatur esse. Officiis labore, quo ex, mollitia dolores debitis culpa ad voluptatum sunt cumque temporibus dolore hic, delectus est. Debitis, sapiente nisi! Libero tempore esse tempora molestiae reiciendis eaque quibusdam, corrupti labore culpa. Ut, perferendis.
+		</div>
 	);
 }

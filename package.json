@@ -12,7 +12,8 @@
     "js-cookie": "^3.0.5",
     "next": "latest",
     "react": "latest",
-    "react-dom": "latest"
+    "react-dom": "latest",
+    "tailwind-merge": "^1.14.0"
   },
   "devDependencies": {
     "@types/js-cookie": "^3.0.4",

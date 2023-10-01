@@ -28,11 +28,20 @@ const bgAndTextColor: ColorThemeDependentCssVars<
     }
 };
 
+const linkNameAndFullPath = [
+    ["home", "/"],
+    ["experience", "/experience"],
+    ["education", "/education"],
+    ["skills", "/skills"],
+    ["plan", "/plan"]
+] as const;
+
 export const constants = {
     colorTheme,
     cookieExpirationDays,
     colorThemeCookieName,
     bgAndTextColor,
     textColorCssVarName,
-    bgColorCssVarName
+    bgColorCssVarName,
+    linkNameAndFullPath
 };

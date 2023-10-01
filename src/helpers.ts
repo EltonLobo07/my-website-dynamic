@@ -27,7 +27,7 @@ function formatClassName(className: string): string {
 function isColorTheme(value: unknown): value is ColorTheme {
     return (
         typeof value === "string" &&
-        constants.colorTheme.findIndex(tVal => tVal === value) > 0
+        constants.colorTheme.findIndex(tVal => tVal === value) > -1
     );
 }
 
