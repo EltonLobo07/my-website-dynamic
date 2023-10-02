@@ -66,6 +66,10 @@ const config: Config = {
         "white-edgar": "#EDEDED",
         "squant": "#666666",
         "cynical-black": "#171717",
+        "white-as-heaven": "#FEFEFE",
+        "dynamic-black": "#1D1D1D",
+        "old-silver": "#838383",
+        
         
         /*
         "stonewall-gray": "#C1C1C1",

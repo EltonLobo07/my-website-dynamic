@@ -1,0 +1,72 @@
+{
+    "projectsImgRootDir": "/images/projects",
+    "projects": [
+        {
+            "title": "Invoice application",
+            "description": "A web application that allows users to store complete or incomplete invoices, delete a stored invoice, mark an invoice as paid, and filter invoices by status. The stored data is protected using a custom authentication and authorization flow.",
+            "imgSrc": "invoice-application.webp",
+            "tags": [
+                "TypeScript",
+                "React",
+                "TailwindCSS",
+                "PostgreSQL",
+                "Express",
+                "JWT"
+            ],
+            "url": {
+                "liveSite": "https://invoice-app.cyclic.cloud/",
+                "code": "https://github.com/EltonLobo07/invoice-app-frontend"
+            }
+        },
+        {
+            "title": "Audiophile e-commerce website",
+            "description": "A website that displays electronic gadgets of an imaginary brand named \"Audiophile\". A user can view items by category, add/delete products from the cart, edit product quantities in the cart, and checkout.",
+            "imgSrc": "audiophile-ecommerce-website.webp",
+            "tags": [
+                "TypeScript",
+                "Next.js",
+                "TailwindCSS"
+            ],
+            "url": {
+                "liveSite": "https://audiophile-ecommerce-el07.vercel.app/",
+                "code": "https://github.com/EltonLobo07/audiophile-ecommerce-website"
+            }
+        },
+        {
+            "title": "Tic Tac Toe game",
+            "description": "A game to play solo or with someone. It doesn't use any technology that connects two browsers yet, so both the players will have to share the same browser tab while playing the game if the \"multiplayer\" option is selected.",
+            "imgSrc": "tic-tac-toe-game.webp",
+            "tags": [
+                "TypeScript",
+                "React",
+                "TailwindCSS"
+            ],
+            "url": {
+                "liveSite": "https://eltonlobo07.github.io/tic-tac-toe/",
+                "code": "https://github.com/EltonLobo07/tic-tac-toe"
+            }
+        }
+    ],
+    "otherProjects": [
+        {
+            "name": "neural style transfer",
+            "link": "https://github.com/EltonLobo07/neural-style-transfer-pytorch"
+        },
+        {
+            "name": "generate handwritten digits",
+            "link": "https://github.com/EltonLobo07/cDCGAN-MNIST-pytorch"
+        },
+        {
+            "name": "expense tracker",
+            "link": "https://expense-tracker-y36v.onrender.com/"
+        },
+        {
+            "name": "online store",
+            "link": "https://fake-store.onrender.com"
+        },
+        {
+            "name": "shortest path finder",
+            "link": "https://eltonlobo07.github.io/shortest-path-finder-py/"
+        }
+    ]
+}

@@ -100,7 +100,6 @@ export default function RootPage() {
 				<p
 					className = {helpers.formatClassName(
 						`
-							text-disco-ball
 							${
 								lightTheme
 								? "text-young-night"

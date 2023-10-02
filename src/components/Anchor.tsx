@@ -38,6 +38,7 @@ export function Anchor(props: Props) {
                         `
                             w-[1em]
                             h-[1em]
+                            flex-shrink-0
                         `
                     )} 
                 />

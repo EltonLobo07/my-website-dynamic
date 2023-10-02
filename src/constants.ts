@@ -31,6 +31,7 @@ const bgAndTextColor: ColorThemeDependentCssVars<
 const linkNameAndFullPath = [
     ["home", "/"],
     ["experience", "/experience"],
+    ["projects", "/projects"],
     ["education", "/education"],
     ["skills", "/skills"],
     ["plan", "/plan"]
