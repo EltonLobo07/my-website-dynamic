@@ -34,7 +34,7 @@ export function PathHeading(props: Props) {
             className = {twMerge(
                 helpers.formatClassName(
                     `   
-                        text-4xl
+                        text-2xl tabAndUp:text-3xl
                         capitalize
                         font-semibold
                     `

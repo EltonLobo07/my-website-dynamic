@@ -10,6 +10,14 @@ type Props =
         children: string
     };
 
+/*
+    ${
+                                lightTheme
+                                ? "text-cynical-black"
+                                : "text-white-edgar"
+                            }
+*/
+
 export function Tag(props: Props) {
     const {
         children,
@@ -36,14 +44,14 @@ export function Tag(props: Props) {
                                 `
                                     border-plaster
                                     bg-black/10      
-                                    text-black
+                                    text-cynical-black
                                 `
                             )
                             : helpers.formatClassName(
                                 `
                                     border-carbon
                                     bg-white/10
-                                    text-white
+                                    text-white-edgar
                                 `
                             )
                         }

@@ -2,6 +2,7 @@
 
 import { Anchor } from "~/components/Anchor";
 import { Tag } from "~/components/Tag";
+import { Calendar } from "~/components/icons/Calendar";
 import { useColorThemeContext } from "~/custom-hooks/useColorThemeContext";
 import { helpers } from "~/helpers";
 import { styles } from "~/styles";
@@ -13,7 +14,7 @@ export default function ExperiencePage() {
     const projectsAndTasksCompleted = "projects & tasks completed";
     const commonHeadingClasses = helpers.formatClassName(
         `
-            text-lg
+            text-base tabAndUp:text-lg
             font-semibold
             capitalize
             mb-1
@@ -52,42 +53,92 @@ export default function ExperiencePage() {
                 `
             )}
         >
-            <h3
+            <div
                 className = {helpers.formatClassName(
                     `
                         mt-auto
-                        text-xl
-                        font-bold
                         flex
-                        gap-x-2
-                        gap-y-2
+                        flex-col
+                        gap-y-1
                     `
                 )}
             >
-                <span
+                <h3
                     className = {helpers.formatClassName(
                         `
-                            capitalize
+                            text-lg tabAndUp:text-xl
+                            font-bold
+                            flex
+                            flex-wrap
+                            gap-x-2
                         `
                     )}
                 >
-                    trainee software engineer
-                </span>
-                <span
-                    style = {styles.visuallyHidden}
+                    <span
+                        className = {helpers.formatClassName(
+                            `
+                                capitalize
+                                text-wrap
+                            `
+                        )}
+                    >
+                        trainee software engineer
+                    </span>
+                    <span
+                        style = {styles.visuallyHidden}
+                    >
+                        at
+                    </span>
+                    <span>
+                        -
+                    </span>
+                    <Anchor
+                        target = "_blank"
+                        href = "https://www.cometchat.com/"
+                    >
+                        CometChat
+                    </Anchor>
+                </h3>
+                <p
+                    className = {helpers.formatClassName(
+                        `
+                            relative
+                            uppercase
+                            text-sm
+                            ${
+                                lightTheme
+                                ? "text-cynical-black"
+                                : "text-white-edgar"
+                            }
+                            flex
+                            gap-x-2
+                            items-center
+                        `
+                    )}
                 >
-                    at
-                </span>
-                <span>
-                    -
-                </span>
-                <Anchor
-                    target = "_blank"
-                    href = "https://www.cometchat.com/"
-                >
-                    CometChat
-                </Anchor>
-            </h3>
+                    <span
+                        style = {styles.visuallyHidden}
+                    >
+                        duration
+                    </span>
+                    <Calendar 
+                        aria-hidden
+                        strokeWidth = {1.25}
+                        className = {helpers.formatClassName(
+                            `
+                                ${
+                                    lightTheme
+                                    ? "text-argent"
+                                    : "text-squant"
+                                }
+                            `
+                        )}
+                    />
+                    <span>
+                        dec 2022 - jul 2023
+                    </span>
+                </p>
+            </div>
             <section
                 aria-label = {projectsAndTasksCompleted}
                 className = {helpers.formatClassName(
@@ -189,8 +240,8 @@ export default function ExperiencePage() {
                             `
                                 flex
                                 flex-wrap
-                                gap-x-5
-                                gap-y-2
+                                gap-x-6
+                                gap-y-1
                                 text-sm
                                 font-semibold
                             `
@@ -222,12 +273,7 @@ export default function ExperiencePage() {
                         </li>
                     </ul>
                 </section>
-                <section
-                    className = {helpers.formatClassName(
-                        `
-                        `
-                    )}
-                >
+                <section>
                     <h5
                         className = {helpers.formatClassName(
                             `
