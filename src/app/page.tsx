@@ -109,7 +109,7 @@ export default function RootPage() {
 						`
 					)}
 				>
-					I&apos;m a software developer from India who spends most of the time focusing on the front end of a software product&apos;s technology stack. I&apos;m currently unemployed and am looking to join a team as a software developer. I have manily written web apps and websites using 
+					I&apos;m a software developer from India who spends most of the time focusing on the front end of a software product&apos;s technology stack. I&apos;m currently unemployed and am looking to join a team as a software developer. I have mainly written web apps and websites using 
 					<Anchor
 						target = "_blank"
 						href = "https://react.dev/"
