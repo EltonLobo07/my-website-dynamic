@@ -33,8 +33,7 @@ const linkNameAndFullPath = [
     ["experience", "/experience"],
     ["projects", "/projects"],
     ["education", "/education"],
-    ["skills", "/skills"],
-    ["plan", "/plan"]
+    ["skills", "/skills"]
 ] as const;
 
 export const constants = {
