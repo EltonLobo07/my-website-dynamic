@@ -72,7 +72,7 @@ export function RootNavMenu(props: Props) {
                                         `
                                             absolute
                                             right-0
-                                            translate-y-[1.125rem]
+                                            translate-y-[32px]
                                             p-24px
                                             rounded-[12px]
                                             border
