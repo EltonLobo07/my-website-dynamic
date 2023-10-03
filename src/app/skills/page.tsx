@@ -41,6 +41,14 @@ export default async function Skills(props: Props) {
                 otherProps.className
             )}
         >
+            <div
+                className = {helpers.formatClassName(
+                    `
+                        mt-auto
+                        -mb-14
+                    `
+                )}
+            ></div>
             <Information 
                 $headingLvl = {3}
                 $message = "To learn more about my experience with a particular tech, click on that tech's title."
@@ -65,6 +73,11 @@ export default async function Skills(props: Props) {
             <SkillsSubSection 
                 $title = "databases"
                 $skills = {databases}
+                className = {helpers.formatClassName(
+                    `
+                        mb-auto
+                    `
+                )}
             />
         </div>
     );

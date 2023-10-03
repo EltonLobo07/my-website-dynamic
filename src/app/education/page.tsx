@@ -52,6 +52,11 @@ export default async function EducationPage(props: Props) {
         >
             <section
                 aria-label = {formalEducationSectionTitle}
+                className = {helpers.formatClassName(
+                    `
+                        mt-auto
+                    `
+                )}
             >
                 <EducationOrSkillHeading>
                     {formalEducationSectionTitle}
@@ -161,6 +166,11 @@ export default async function EducationPage(props: Props) {
             </section>
             <section
                 aria-label = {relevantActivitySectionTitle}
+                className = {helpers.formatClassName(
+                    `
+                        mb-auto
+                    `
+                )}
             >
                 <EducationOrSkillHeading>
                     {relevantActivitySectionTitle}
