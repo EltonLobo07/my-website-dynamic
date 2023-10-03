@@ -1,6 +1,7 @@
 "use client";
 
 import { Anchor } from "~/components/Anchor";
+import { Duration } from "~/components/Duration";
 import { Tag } from "~/components/Tag";
 import { Calendar } from "~/components/icons/Calendar";
 import { useColorThemeContext } from "~/custom-hooks/useColorThemeContext";
@@ -71,6 +72,7 @@ export default function ExperiencePage() {
                             flex
                             flex-wrap
                             gap-x-2
+                            items-baseline
                         `
                     )}
                 >
@@ -99,45 +101,10 @@ export default function ExperiencePage() {
                         CometChat
                     </Anchor>
                 </h3>
-                <p
-                    className = {helpers.formatClassName(
-                        `
-                            relative
-                            uppercase
-                            text-sm
-                            ${
-                                lightTheme
-                                ? "text-cynical-black"
-                                : "text-white-edgar"
-                            }
-                            flex
-                            gap-x-2
-                            items-center
-                        `
-                    )}
-                >
-                    <span
-                        style = {styles.visuallyHidden}
-                    >
-                        duration
-                    </span>
-                    <Calendar 
-                        aria-hidden
-                        strokeWidth = {1.25}
-                        className = {helpers.formatClassName(
-                            `
-                                ${
-                                    lightTheme
-                                    ? "text-argent"
-                                    : "text-squant"
-                                }
-                            `
-                        )}
-                    />
-                    <span>
-                        dec 2022 - jul 2023
-                    </span>
-                </p>
+                <Duration 
+                    $from = "dec 2022"
+                    $to = "jul 2023"
+                />
             </div>
             <section
                 aria-label = {projectsAndTasksCompleted}

@@ -12,19 +12,21 @@ type Props =
         | "ref" 
         | "children"
     > & {
-        children: string
+        children: React.ReactNode,
+        hideArrow?: boolean
     };
 
 export function Anchor(props: Props) {
     const {
         children,
+        hideArrow,
         ...otherProps
     } = props;
 
     const colorTheme = useColorThemeContext()[0];
 
     let externalLinkArrow: JSX.Element | null = null;
-    if (otherProps.target === "_blank") {
+    if (otherProps.target === "_blank" && !hideArrow) {
         externalLinkArrow = (
             <>
                 <span
@@ -71,9 +73,11 @@ export function Anchor(props: Props) {
                 otherProps.className
             )}
         >
-            <span>
-                {children}
-            </span>
+            {
+                typeof children === "object"
+                ? children
+                : <span>{children}</span>
+            }
             {externalLinkArrow}
         </a>
     );

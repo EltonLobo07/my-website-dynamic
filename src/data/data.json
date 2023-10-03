@@ -68,5 +68,61 @@
             "name": "shortest path finder",
             "link": "https://eltonlobo07.github.io/shortest-path-finder-py/"
         }
+    ],
+    "onlineCourses": [
+        {
+            "name": "CSS for JavaScript developers",
+            "offeredBy": "Josh W Comeau",
+            "certificateLink": "https://courses.joshwcomeau.com/certificate/64e371f6bd0b8302212b4133",
+            "background": " I've always had a hard time working with CSS. Building personal projects and working professionally using CSS helped me get better, but I still didn't feel completely confident. It bothered me not to have confidence in working with the technology I get paid for. One important lesson I learned while using CSS is to learn CSS concepts, not specific properties. Docs are always at my disposal, helping me understand the details of a given property. The course offered by Josh really resonated with this idea."
+        },
+        {
+            "name": "Full stack open",
+            "offeredBy": "University of Helsinki",
+            "certificateLink": "https://studies.cs.helsinki.fi/stats/api/certificate/fullstackopen/en/10dea88b3e2446a38dfa5f60bb16ece9",
+            "background": "After working on my final year project, where I was responsible for building a machine learning model for the \"image manipulation detection\" problem, I wanted to create a frontend to let my friends and potential employers explore my project. I realized there was so much I didn't know about in the frontend world of web development. Knowing this, one of my college friends recommended this course."
+        },
+        {
+            "name": "The Bits and Bytes of Computer Networking",
+            "offeredBy": "Coursera",
+            "certificateLink": "https://coursera.org/share/fe0840bf3ec9237fe94c60b9a17c499c",
+            "background": "During the COVID-19 pandemic, my college helped students study by providing access to paid Coursera courses. While exploring the courses offered by Coursera, this course caught my attention. I was curious to learn more about how computers communicate. In the following semester, I had to take a course on computer networking. I thought taking this course would help me get a basic idea of computer networks."
+        },
+        {
+            "name": "Programming Foundations with JavaScript, HTML and CSS",
+            "offeredBy": "Coursera",
+            "certificateLink": "https://coursera.org/share/1e08049dbdd5dad50c36cc399dc14a77",
+            "background": "During the COVID-19 pandemic, the computer engineering department of my college had planned a crash course covering the basics of frontend web development. After taking the course, I wanted to learn more about HTML, CSS, and JavaScript."
+        },
+        {
+            "name": "SQL and PostgreSQL",
+            "offeredBy": "Udemy",
+            "certificateLink": "https://www.udemy.com/certificate/UC-e9cd3643-dbd8-4273-9b8a-43d6a17f708e/",
+            "background": "For some reason, I don't enjoy writing SQL queries. Maybe the Database Management System course I had taken didn't do a good job? Maybe writing SQL queries is just not for me? But, as a software developer, it's important to know how to write SQL queries and handle databases at a basic level. I decided to take this course in order to gain some basic knowledge of PostgreSQL and build a backend for one of my personal projects."
+        },
+        {
+            "name": "Python Classes and Inheritance",
+            "offeredBy": "Coursera",
+            "certificateLink": "https://coursera.org/share/0af8d52eff659e4da7b8b1b45f0754f1",
+            "background": "I realized that I had a basic understanding of C, C++, Java, and Python during the third year of my four-year degree in computer engineering and that it was time for me to choose a programming language and master it. I picked Python and started taking courses to master it."
+        },
+        {
+            "name": "Machine Learning",
+            "offeredBy": "Coursera",
+            "certificateLink": "https://coursera.org/share/8086267f716fba50a00ae6e53495ad59",
+            "background": "At the end of 2020, I had a good understanding of Python programming but didn't know what to do next or which software engineering field might interest me. In a short conversation with a senior student, he mentioned that I might enjoy learning about machine learning. I decided to take this course a few days after that conversation to learn more about machine learning."
+        },
+        {
+            "name": "Deep Learning",
+            "offeredBy": "Coursera",
+            "certificateLink": "https://www.coursera.org/account/accomplishments/specialization/48AVQAJBSM2H",
+            "background": "The next natural step most students take after completing the Coursera machine learning course, which is recommended, is to study the topics of this specialization course, and I did exactly that."
+        },
+        {
+            "name": "Generative Adversarial Networks (GANs)",
+            "offeredBy": "Coursera",
+            "certificateLink": "https://www.coursera.org/account/accomplishments/specialization/ZM86Y5JBD7FD",
+            "background": "After having a basic understanding of most of the commonly used deep learning concepts, there was an entire area of deep learning that I had very little idea of: teaching machines to generate something. Wait, no. This can't be done. That's how I reacted the first time. I got motivated to explore more about the subject and ended up taking this course."
+        }
     ]
 }

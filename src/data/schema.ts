@@ -19,10 +19,18 @@ const otherProjects = z.array(z.object({
     link: z.string()
 }));
 
+const onlineCourses = z.array(z.object({
+    name: z.string(),
+    offeredBy: z.string(),
+    certificateLink: z.string(),
+    background: z.string()
+}));
+
 const data = z.object({
     projects,
     projectsImgRootDir,
-    otherProjects
+    otherProjects,
+    onlineCourses
 });
 
 export const schema = {
