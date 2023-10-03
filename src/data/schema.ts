@@ -26,11 +26,24 @@ const onlineCourses = z.array(z.object({
     background: z.string()
 }));
 
+const skills = z.array(z.object({
+    name: z.string(),
+    background: z.string()
+}));
+
+const mySkills = z.object({
+    languages: skills,
+    "libraries & frameworks": skills,
+    "tools & platforms": skills,
+    databases: skills
+});
+
 const data = z.object({
     projects,
     projectsImgRootDir,
     otherProjects,
-    onlineCourses
+    onlineCourses,
+    mySkills
 });
 
 export const schema = {

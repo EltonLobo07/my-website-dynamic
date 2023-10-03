@@ -3,7 +3,6 @@
 import { Anchor } from "~/components/Anchor";
 import { Duration } from "~/components/Duration";
 import { Tag } from "~/components/Tag";
-import { Calendar } from "~/components/icons/Calendar";
 import { useColorThemeContext } from "~/custom-hooks/useColorThemeContext";
 import { helpers } from "~/helpers";
 import { styles } from "~/styles";

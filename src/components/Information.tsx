@@ -114,6 +114,7 @@ export function Information(props: Props) {
                 <p
                     className = {helpers.formatClassName(
                         `
+                            text-sm
                             ${
                                 lightTheme
                                 ? "text-argent"

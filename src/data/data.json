@@ -124,5 +124,59 @@
             "certificateLink": "https://www.coursera.org/account/accomplishments/specialization/ZM86Y5JBD7FD",
             "background": "After having a basic understanding of most of the commonly used deep learning concepts, there was an entire area of deep learning that I had very little idea of: teaching machines to generate something. Wait, no. This can't be done. That's how I reacted the first time. I got motivated to explore more about the subject and ended up taking this course."
         }
-    ]
+    ],
+    "mySkills": {
+        "languages": [
+            {
+                "name": "HTML, CSS & JavaScript",
+                "background": "I learned to work with HTML, CSS, and JavaScript while I was studying for my computer engineering degree, and I have continued to use them since then. For nearly a year, JavaScript was my primary language for personal projects."
+            },
+            {
+                "name": "TypeScript",
+                "background": "I started using TypeScript professionally in 2023. It has become my go-to language and will continue to be the default for all of my personal frontend projects."
+            },
+            {
+                "name": "Python",
+                "background": "In mid-2020, I started learning Python through Coursera courses. Since then, I have built a few machine learning models while learning about machine learning. I've also been using Python for most of the programming problems on Leetcode. I don't have any professional experience using this language."
+            }
+        ],
+        "libraries & frameworks": [
+            {
+                "name": "React",
+                "background": "I have been using React for more than a year now. It is the first and only UI framework I have used to build user interfaces for personal and professional projects."
+            },
+            {
+                "name": "Next.js",
+                "background": "From August 2023, I started exploring Next.js and began to develop some projects that have made use of it. This website is built using Next.js!"
+            },
+            {
+                "name": "TailwindCSS",
+                "background": "I have been using TailwindCSS for more than a year. It is and will be the default styling choice for all of my personal front-end projects. I have a decent mental model of the commonly used CSS concepts. So using a different styling option for professional use is no big deal."
+            },
+            {
+                "name": "Express",
+                "background": "I use Express whenever I need a web server. I learned about Express while taking a course about full-stack web development in mid-2022."
+            },
+            {
+                "name": "Redux",
+                "background": "I learned why and how to use Redux in mid-2022. Apart from that, I have worked with Redux professionally while adding a feature to CometChat's dashboard."
+            }
+        ],
+        "tools & platforms": [
+            {
+                "name": "Git",
+                "background": "Git was the primary version control system used by the company I was working for. Most of the Git related tasks I completed were to create, merge, or compare branches and revert changes."
+            },
+            {
+                "name": "Github",
+                "background": "I use Github most of the time to create remote repositories for my local git repositories. In addition, I'm aware of the regularly used Github rules followed by developers for effective collaboration."
+            }
+        ],
+        "databases": [
+            {
+                "name": "PostgreSQL",
+                "background": "I used a SQL-based database while I was studying for my computer engineering degree. I don't use PostgreSQL often, as most of the time I work on the frontend of an application, but whenever I need a general database for a personal project, I plan to use PostgreSQL."
+            }
+        ]
+    }
 }

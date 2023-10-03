@@ -8,6 +8,7 @@ type Data = z.infer<typeof schema.data>;
 type Projects = Data["projects"];
 type OtherProjects = Data["otherProjects"];
 type OnlineCourses = Data["onlineCourses"];
+type MySkills = Data["mySkills"];
 
 async function getData(): Promise<Data> {
     return schema.data.parse(JSON.parse(await fs.readFile(DATA_FILE_PATH, "utf-8")));
@@ -32,8 +33,13 @@ async function getOnlineCourses(): Promise<OnlineCourses> {
     return (await getData())["onlineCourses"];
 }
 
+async function getMySkills(): Promise<MySkills> {
+    return (await getData())["mySkills"]; 
+}
+
 export const dataHelpers = {
     getProjects,
     getOtherProjects,
-    getOnlineCourses
+    getOnlineCourses,
+    getMySkills
 };

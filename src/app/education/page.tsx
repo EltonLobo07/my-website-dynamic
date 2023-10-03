@@ -7,14 +7,14 @@ import { Information } from "~/components/Information";
 import { ToggleList } from "~/components/ToggleList";
 import { CGPA } from "~/components/CGPA";
 import { dataHelpers } from "~/data/dataHelpers";
-import { EducationHeading } from "~/components/EducationHeading";
+import { EducationOrSkillHeading } from "~/components/EducationOrSkillHeading";
 import { Certificate } from "~/components/icons/Certificate";
 import { Leetcode } from "~/components/Leetcode";
 
 type Props = 
     Omit<JSX.IntrinsicElements["div"], "ref" | "children"> & 
     {
-        searchParams: string
+        searchParams: any
     };
 
 export default async function EducationPage(props: Props) {
@@ -48,9 +48,9 @@ export default async function EducationPage(props: Props) {
             <section
                 aria-label = {formalEducationSectionTitle}
             >
-                <EducationHeading>
+                <EducationOrSkillHeading>
                     {formalEducationSectionTitle}
-                </EducationHeading>
+                </EducationOrSkillHeading>
                 <p
                     className = {helpers.formatClassName(
                         `
@@ -94,7 +94,7 @@ export default async function EducationPage(props: Props) {
                     className = "mb-1"
                 />
                 <CGPA>
-                    9.69
+                    9.72
                 </CGPA>
             </section>
             <section
@@ -107,9 +107,9 @@ export default async function EducationPage(props: Props) {
                     `
                 )}
             >
-                <EducationHeading>
+                <EducationOrSkillHeading>
                     {onlineCoursesSectionTitle}
-                </EducationHeading>
+                </EducationOrSkillHeading>
                 <Information 
                     $message = "To find out what made me take a particular course, click on that course's title."
                     $headingLvl = {4}
@@ -157,9 +157,9 @@ export default async function EducationPage(props: Props) {
             <section
                 aria-label = {relevantActivitySectionTitle}
             >
-                <EducationHeading>
+                <EducationOrSkillHeading>
                     {relevantActivitySectionTitle}
-                </EducationHeading>
+                </EducationOrSkillHeading>
                 <Leetcode />
             </section>
         </div>
