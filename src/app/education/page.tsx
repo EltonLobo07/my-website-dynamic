@@ -10,12 +10,17 @@ import { dataHelpers } from "~/data/dataHelpers";
 import { EducationOrSkillHeading } from "~/components/EducationOrSkillHeading";
 import { Certificate } from "~/components/icons/Certificate";
 import { Leetcode } from "~/components/Leetcode";
+import { Metadata } from "next";
 
 type Props = 
     Omit<JSX.IntrinsicElements["div"], "ref" | "children"> & 
     {
         searchParams: any
     };
+
+export const metadata: Metadata = {
+    title: helpers.addMyFullname("Education")
+};
 
 export default async function EducationPage(props: Props) {
     const onlineCourses = await dataHelpers.getOnlineCourses();

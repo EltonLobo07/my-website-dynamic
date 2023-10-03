@@ -13,6 +13,7 @@ type Props =
     CustomPropsObj<{
         img: {
             src: string,
+            blurDataUrl: string,
             alt?: string
         },
         title: string,
@@ -68,7 +69,8 @@ export function ProjectCard(props: Props) {
                         gap-y-[32px] laptopAndUp:gap-y-0
                         border
                         rounded-[16px]
-                        p-[16px]
+                        py-[32px]
+                        px-[16px]
                         ${
                             lightTheme
                             ? helpers.formatClassName(
@@ -107,6 +109,7 @@ export function ProjectCard(props: Props) {
                     alt = {$img.alt ?? `${$title} sample`}
                     priority = {Boolean($loadImgAsap)}
                     sizes = "100%"
+                    blurDataURL = {$img.blurDataUrl}
                     className = {helpers.formatClassName(
                         `
                             object-cover

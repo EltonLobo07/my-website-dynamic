@@ -1,5 +1,5 @@
+import { Metadata } from "next";
 import { twMerge } from "tailwind-merge";
-import { EducationOrSkillHeading } from "~/components/EducationOrSkillHeading";
 import { Information } from "~/components/Information";
 import { SkillsSubSection } from "~/components/SkillsSubSection";
 import { dataHelpers } from "~/data/dataHelpers";
@@ -7,6 +7,10 @@ import { helpers } from "~/helpers";
 import { styles } from "~/styles";
 
 type Props = Omit<JSX.IntrinsicElements["div"], "ref" | "children"> & {searchParams: any};
+
+export const metadata: Metadata = {
+    title: helpers.addMyFullname("Skills")
+};
 
 export default async function Skills(props: Props) {
     const {
@@ -31,6 +35,7 @@ export default async function Skills(props: Props) {
                         flex
                         flex-col
                         gap-y-14
+                        pb-[4px]
                     `
                 ),
                 otherProps.className

@@ -1,10 +1,12 @@
 import { twMerge } from "tailwind-merge";
+import { helpers } from "~/helpers";
 
 type Props = Omit<JSX.IntrinsicElements["svg"], "ref" | "children">;
 
-export function Moon(props: Props) {
+export function RightArrow(props: Props) {
     return (
         <svg
+            {...props}
             xmlns = "http://www.w3.org/2000/svg"
             fill = "none"
             stroke = "currentColor"
@@ -12,13 +14,18 @@ export function Moon(props: Props) {
             strokeLinejoin = "round"
             strokeWidth = "2"
             viewBox = "0 0 24 24"
-            {...props}
             className = {twMerge(
-                "w-[24px] h-[24px]",
+                helpers.formatClassName(
+                    `
+                        w-[24px]
+                        h-[24px]
+                    `
+                ),
                 props.className
             )}
         >
-            <path d ="M21 12.79A9 9 0 1111.21 3 7 7 0 0021 12.79z"></path>
+            <path d = "M5 12L19 12"></path>
+            <path d = "M12 5L19 12 12 19"></path>
         </svg>
     );
 }

@@ -5,6 +5,7 @@ const projects = z.array(z.object({
     description: z.string(),
     imgSrc: z.string(),
     imgAlt: z.string().optional(),
+    blurDataUrl: z.string(),
     tags: z.array(z.string()),
     url: z.object({
         liveSite: z.string(),

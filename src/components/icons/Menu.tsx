@@ -17,8 +17,8 @@ export function Menu(props: Props) {
             className = {twMerge(
                 helpers.formatClassName(
                     `
-                        w-24px
-                        h-24px
+                        w-[24px]
+                        h-[24px]
                     `
                 ),
                 props.className

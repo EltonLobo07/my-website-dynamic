@@ -18,8 +18,8 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  title: "Elton Lobo"
-}
+	title: helpers.addMyFullname("")
+};
 
 type Props = {
   children: React.ReactNode
@@ -32,7 +32,7 @@ export default function RootLayout(props: Props) {
 		helpers.isColorTheme(colorThemeCookieValue)
 		? colorThemeCookieValue
 		: "dark";
-	const commonVerticalPadding = "py-16px laptopAndUp:py-80px";
+	const commonVerticalPadding = "py-16px laptopAndUp:py-72px";
 
 	return (
 		<html 
@@ -93,6 +93,7 @@ export default function RootLayout(props: Props) {
 										my-auto
 										pl-16px
 										pr-12
+										py-[4px]
 									`
 								)}
 							/>
@@ -117,7 +118,7 @@ export default function RootLayout(props: Props) {
 										hidden laptopAndUp:inline-block
 										absolute
 										top-[16px]
-										right-0
+										right-[4px]
 									`
 								)}
 							/>
@@ -148,17 +149,23 @@ export default function RootLayout(props: Props) {
 											ml-auto
 											flex
 											gap-x-[16px]
-											pr-[2px]
+											pr-[4px]
+											items-center
 										`
 									)}
 								>
-									<ToggleColorThemeBtn />
+									<ToggleColorThemeBtn
+										className = "flex-shrink-0"
+									/>
 									<RootNavMenu 
 										className = {helpers.formatClassName(
 											`
+												flex-shrink-0
 												laptopAndUp:hidden
 												relative
 												z-10
+												flex
+												items-center
 											`
 										)}
 									/>

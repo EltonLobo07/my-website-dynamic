@@ -5,6 +5,7 @@
             "title": "Invoice application",
             "description": "A web application that allows users to store complete or incomplete invoices, delete a stored invoice, mark an invoice as paid, and filter invoices by status. The stored data is protected using a custom authentication and authorization flow.",
             "imgSrc": "invoice-application.webp",
+            "blurDataUrl": "data:image/webp;base64,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",
             "tags": [
                 "TypeScript",
                 "React",
@@ -20,8 +21,9 @@
         },
         {
             "title": "Audiophile e-commerce website",
-            "description": "A website that displays electronic gadgets of an imaginary brand named \"Audiophile\". A user can view items by category, add/delete products from the cart, edit product quantities in the cart, and checkout.",
+            "description": "A website that displays electronic gadgets of an imaginary company named \"Audiophile\". A user can view items by category, add or delete products from the cart, edit product quantities in the cart, and checkout.",
             "imgSrc": "audiophile-ecommerce-website.webp",
+            "blurDataUrl": "data:image/webp;base64,UklGRpQCAABXRUJQVlA4WAoAAAAgAAAAZAAAFwEASUNDUMgBAAAAAAHIAAAAAAQwAABtbnRyUkdCIFhZWiAH4AABAAEAAAAAAABhY3NwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAA9tYAAQAAAADTLQAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAlkZXNjAAAA8AAAACRyWFlaAAABFAAAABRnWFlaAAABKAAAABRiWFlaAAABPAAAABR3dHB0AAABUAAAABRyVFJDAAABZAAAAChnVFJDAAABZAAAAChiVFJDAAABZAAAAChjcHJ0AAABjAAAADxtbHVjAAAAAAAAAAEAAAAMZW5VUwAAAAgAAAAcAHMAUgBHAEJYWVogAAAAAAAAb6IAADj1AAADkFhZWiAAAAAAAABimQAAt4UAABjaWFlaIAAAAAAAACSgAAAPhAAAts9YWVogAAAAAAAA9tYAAQAAAADTLXBhcmEAAAAAAAQAAAACZmYAAPKnAAANWQAAE9AAAApbAAAAAAAAAABtbHVjAAAAAAAAAAEAAAAMZW5VUwAAACAAAAAcAEcAbwBvAGcAbABlACAASQBuAGMALgAgADIAMAAxADZWUDggpgAAAJALAJ0BKmUAGAE+0WiuUyglpCKgSGEAGglpbt47/efUeCAnx3j8yz4Fxu5vRaEQlsmRR/g+jrgjn8kMgbyePSaTfa34nRWNAgQIECBAgQIECBAgQbLwYi6wTEY30n/zuDZTbwIAAP7wycggJ8E94hoBoObbk6be45L2gfudzl5Gty2WgMnY03w2hEWOopspm7KwAAeR2bNUueajFUvKPijIfXIAAAA=",
             "tags": [
                 "TypeScript",
                 "Next.js",
@@ -34,8 +36,9 @@
         },
         {
             "title": "Tic Tac Toe game",
-            "description": "A game to play solo or with someone. It doesn't use any technology that connects two browsers yet, so both the players will have to share the same browser tab while playing the game if the \"multiplayer\" option is selected.",
+            "description": "Classic tic-tac-toe game to play with a machine or someone. It doesn't use any technology that connects two browsers yet, so both players will have to share the same browser tab while playing the game if the \"multiplayer\" option is selected.",
             "imgSrc": "tic-tac-toe-game.webp",
+            "blurDataUrl": "data:image/webp;base64,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",
             "tags": [
                 "TypeScript",
                 "React",
@@ -80,7 +83,7 @@
             "name": "Full stack open",
             "offeredBy": "University of Helsinki",
             "certificateLink": "https://studies.cs.helsinki.fi/stats/api/certificate/fullstackopen/en/10dea88b3e2446a38dfa5f60bb16ece9",
-            "background": "After working on my final year project, where I was responsible for building a machine learning model for the \"image manipulation detection\" problem, I wanted to create a frontend to let my friends and potential employers explore my project. I realized there was so much I didn't know about in the frontend world of web development. Knowing this, one of my college friends recommended this course."
+            "background": "After working on my final year project, where I was responsible for building a machine learning model for the \"image manipulation detection\" problem, I wanted to create a frontend to let my friends and potential employers explore my project. I realized there was so much I didn't know about modern frontend web development. Knowing this, one of my college friends recommended this course."
         },
         {
             "name": "The Bits and Bytes of Computer Networking",
@@ -104,7 +107,7 @@
             "name": "Python Classes and Inheritance",
             "offeredBy": "Coursera",
             "certificateLink": "https://coursera.org/share/0af8d52eff659e4da7b8b1b45f0754f1",
-            "background": "I realized that I had a basic understanding of C, C++, Java, and Python during the third year of my four-year degree in computer engineering and that it was time for me to choose a programming language and master it. I picked Python and started taking courses to master it."
+            "background": "I realized that I had a basic understanding of C, C++, Java, and Python during the third year of my four-year computer engineering degree program and that it was time for me to choose a programming language and master it. I picked Python and started taking courses to master it."
         },
         {
             "name": "Machine Learning",
@@ -151,7 +154,7 @@
             },
             {
                 "name": "TailwindCSS",
-                "background": "I have been using TailwindCSS for more than a year. It is and will be the default styling choice for all of my personal front-end projects. I have a decent mental model of the commonly used CSS concepts. So using a different styling option for professional use is no big deal."
+                "background": "I have been using TailwindCSS for more than a year. It is and will be the default styling choice for all of my personal front-end projects. I have a decent mental model of commonly used CSS concepts, so using a different styling option for professional use is no big deal."
             },
             {
                 "name": "Express",
@@ -175,7 +178,7 @@
         "databases": [
             {
                 "name": "PostgreSQL",
-                "background": "I used a SQL-based database while I was studying for my computer engineering degree. I don't use PostgreSQL often, as most of the time I work on the frontend of an application, but whenever I need a general database for a personal project, I plan to use PostgreSQL."
+                "background": "I used a SQL-based database while I was studying for my computer engineering degree. I don't use PostgreSQL often, as most of the time I work on the frontend of an application, but whenever I need a general database for a personal project, I use PostgreSQL."
             }
         ]
     }

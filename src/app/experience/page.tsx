@@ -12,6 +12,8 @@ export default function ExperiencePage() {
 
     const lightTheme = colorTheme === "light";
     const projectsAndTasksCompleted = "projects & tasks completed";
+    const relevantLinksSectionTitle = "relevant links";
+    const techUsedSectionTitle = "tech used";
     const commonHeadingClasses = helpers.formatClassName(
         `
             text-base tabAndUp:text-lg
@@ -90,7 +92,9 @@ export default function ExperiencePage() {
                     >
                         at
                     </span>
-                    <span>
+                    <span
+                        aria-hidden
+                    >
                         -
                     </span>
                     <Anchor
@@ -130,6 +134,7 @@ export default function ExperiencePage() {
                             flex
                             flex-col
                             gap-y-1
+                            ml-2
                         `
                     )}
                 >
@@ -181,11 +186,12 @@ export default function ExperiencePage() {
                                 `
                             )}
                         >
-                            Fixed few minor dashboard related issues.
+                            Fixed few minor dashboard related UI issues.
                         </span>
                     </li>
                 </ul>
                 <section
+                    aria-label = {relevantLinksSectionTitle}
                     className = {helpers.formatClassName(
                         `
                             mb-6
@@ -199,7 +205,7 @@ export default function ExperiencePage() {
                             `
                         )}
                     >
-                        relevant links
+                        {relevantLinksSectionTitle}
                     </h5>
                     <ul
                         className = {helpers.formatClassName(
@@ -239,7 +245,9 @@ export default function ExperiencePage() {
                         </li>
                     </ul>
                 </section>
-                <section>
+                <section
+                    aria-label = {techUsedSectionTitle}
+                >
                     <h5
                         className = {helpers.formatClassName(
                             `
@@ -247,7 +255,7 @@ export default function ExperiencePage() {
                             `
                         )}
                     >
-                        tech used
+                        {techUsedSectionTitle}
                     </h5>
                     <ul
                         className = {helpers.formatClassName(

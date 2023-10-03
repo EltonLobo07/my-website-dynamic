@@ -19,6 +19,7 @@ export function Leetcode(props: Props) {
                         flex
                         flex-col
                         gap-y-2
+                        pb-[4px]
                     `
                 ),
                 props.className
@@ -45,7 +46,7 @@ export function Leetcode(props: Props) {
                     `
                 )}
             >
-                Trying to find the best solution to a problem is one of the challenges I like to tackle as a software developer. To do this, I may need to create a new algorithm, use an existing algorithm, or use some kind of data structure that is appropriate for the problem at hand. This is just one of the many reasons why I&apos;ve been using data structures and algorithms to solve small problems on Leetcode.
+                Trying to find the best solution to a problem is one of the challenges I like to tackle as a software developer. To do this, I may need to create a new algorithm, use an existing algorithm, or use some data structure that is appropriate for the problem at hand. This is just one of the many reasons why I&apos;ve been practicing data structures and algorithms on Leetcode.
             </p>
             <Anchor
                 target = "_blank"

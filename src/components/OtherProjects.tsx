@@ -14,7 +14,7 @@ type Props =
         }
     >;
 
-export function OtherProjectsClient(props: Props) {
+export function OtherProjects(props: Props) {
     const colorTheme = useColorThemeContext()[0];
     const lightTheme = colorTheme === "light";
 
@@ -91,6 +91,7 @@ export function OtherProjectsClient(props: Props) {
                             )}
                         >
                             <Anchor
+                                hideArrow
                                 target = "_blank"
                                 href = {otherProject.link}
                                 className = {helpers.formatClassName(

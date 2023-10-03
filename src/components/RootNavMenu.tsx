@@ -64,7 +64,7 @@ export function RootNavMenu(props: Props) {
                                 enterTo = "transform scale-100 opacity-100"
                                 leave = "transition duration-75 ease-out"
                                 leaveFrom = "transform scale-100 opacity-100"
-                                leaveTo = "transform scale-95 opacity-0"
+                                leaveTo = "transform scale-95 opacity-0" 
                             >
                                 <Menu.Items
                                     as = "ul"
@@ -83,6 +83,8 @@ export function RootNavMenu(props: Props) {
                                                 ? "border-plaster bg-white"
                                                 : "border-carbon bg-black"
                                             }
+                                            max-h-[350px]
+                                            overflow-y-auto
                                         `
                                     )}
                                 >

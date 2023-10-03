@@ -14,7 +14,7 @@ export function Sun(props: Props) {
             viewBox = "0 0 24 24"
             {...props}
             className = {twMerge(
-                "w-24px h-24px",
+                "w-[24px] h-[24px]",
                 props.className
             )}
         >

@@ -134,7 +134,7 @@ export function Information(props: Props) {
                     `
                         flex-shrink-0
                         self-start
-                        p-2
+                        p-[8px]
                         rounded-full
                         border
                         ${

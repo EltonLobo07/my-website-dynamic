@@ -1,5 +1,6 @@
 "use client";
 
+import { Metadata } from "next";
 import { Anchor } from "~/components/Anchor";
 import { ExternalLink } from "~/components/icons/ExternalLink";
 import { Github } from "~/components/icons/Github";
@@ -108,18 +109,19 @@ export default function RootPage() {
 						`
 					)}
 				>
-					I&apos;m a software developer from India who spends most of the time focusing on the front end of a software product&apos;s technology stack. I&apos;m currently unemployed and am looking to join a team as a software developer. I have mainly written web apps and websites using 
+					I&apos;m a software developer from India who spends most of the time focusing on the front end of a software product. I&apos;m currently unemployed and am looking to join a team as a software developer. I have mainly written web apps and websites using 
 					<Anchor
 						target = "_blank"
 						href = "https://react.dev/"
 					>
 						React
 					</Anchor>
-					, but I am motivated to work on problems that require me to create good technical solutions.
+					. I am motivated to work on problems that require software developers to create efficient technical solutions using technology suited for the issue at hand.
 				</p>
 				<Anchor
 					target = "_blank"
 					href = "#"
+					useRightArrow
 					className = {helpers.formatClassName(
 						`
 							capitalize
@@ -162,6 +164,11 @@ export default function RootPage() {
 					</span>
 					<Mail 
 						aria-hidden
+						className = {helpers.formatClassName(
+							`
+								flex-shrink-0
+							`
+						)}
 					/>
 					<span>
 						eltonsw00@gmail.com
@@ -187,6 +194,11 @@ export default function RootPage() {
 				>
 					<Github 
 						aria-hidden
+						className = {helpers.formatClassName(
+							`
+								flex-shrink-0
+							`
+						)}
 					/>
 					<span
 						aria-hidden
@@ -197,8 +209,8 @@ export default function RootPage() {
 						aria-hidden
 						className = {helpers.formatClassName(
 							`
-								w-[16px]
-								h-[16px]
+								w-[1em]
+								h-[1em]
 							`
 						)}
 					/>

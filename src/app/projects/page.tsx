@@ -1,11 +1,17 @@
-import { OtherProjectsServer } from "~/components/OtherProjectsServer";
+import { Metadata } from "next";
+import { OtherProjects } from "~/components/OtherProjects";
 import { ProjectCard } from "~/components/ProjectCard";
 import { dataHelpers } from "~/data/dataHelpers";
 import { helpers } from "~/helpers";
 import { styles } from "~/styles";
 
+export const metadata: Metadata = {
+    title: helpers.addMyFullname("Projects")
+};
+
 export default async function ProjectsPage() {
     const projects = await dataHelpers.getProjects();
+    const otherProjects = await dataHelpers.getOtherProjects();
 
     return (
         <div
@@ -21,6 +27,7 @@ export default async function ProjectsPage() {
             <ul
                 className = {helpers.formatClassName(
                     `
+                        mt-auto
                         flex
                         flex-col
                         gap-y-12
@@ -35,7 +42,8 @@ export default async function ProjectsPage() {
                             <ProjectCard 
                                 $img = {{
                                     src: project.imgSrc,
-                                    alt: project.imgAlt
+                                    alt: project.imgAlt,
+                                    blurDataUrl: project.blurDataUrl
                                 }}
                                 $description = {project.description}
                                 $title = {project.title}
@@ -47,7 +55,14 @@ export default async function ProjectsPage() {
                     ))
                 }
             </ul>
-            <OtherProjectsServer />
+            <OtherProjects 
+                $otherProjects = {otherProjects}
+                className = {helpers.formatClassName(
+                    `
+                        mb-auto
+                    `
+                )}
+            />
         </div>
     );
 }

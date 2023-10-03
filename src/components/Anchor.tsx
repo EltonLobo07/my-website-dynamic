@@ -5,6 +5,7 @@ import { styles } from "~/styles";
 import { twMerge } from "tailwind-merge";
 import { ExternalLink } from "~/components/icons/ExternalLink";
 import { useColorThemeContext } from "~/custom-hooks/useColorThemeContext";
+import { RightArrow } from "~/components/icons/RightArrow";
 
 type Props = 
     Omit<
@@ -13,13 +14,15 @@ type Props =
         | "children"
     > & {
         children: React.ReactNode,
-        hideArrow?: boolean
+        hideArrow?: boolean,
+        useRightArrow?: boolean
     };
 
 export function Anchor(props: Props) {
     const {
         children,
         hideArrow,
+        useRightArrow,
         ...otherProps
     } = props;
 
@@ -27,6 +30,7 @@ export function Anchor(props: Props) {
 
     let externalLinkArrow: JSX.Element | null = null;
     if (otherProps.target === "_blank" && !hideArrow) {
+        const Icon = useRightArrow ? RightArrow : ExternalLink;
         externalLinkArrow = (
             <>
                 <span
@@ -34,7 +38,10 @@ export function Anchor(props: Props) {
                 >
                     (opens in a new tab)
                 </span>
-                <ExternalLink
+                {
+
+                }
+                <Icon
                     aria-hidden
                     className = {helpers.formatClassName(
                         `

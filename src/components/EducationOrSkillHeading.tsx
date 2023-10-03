@@ -47,12 +47,10 @@ export function EducationOrSkillHeading(props: Props) {
                         font-semibold
                         capitalize
                         w-fit
-                        border-y
-                        border-r
+                        border-b
                         sticky
                         top-[-1px]
                         py-2
-                        pr-2
                         z-10
                         mb-2
                         ${
@@ -72,7 +70,7 @@ export function EducationOrSkillHeading(props: Props) {
                             isPinned
                             ? helpers.formatClassName(
                                 `
-                                    pl-2
+                                    w-full
                                     shadow-sm
                                     rounded-br-sm
                                     ${

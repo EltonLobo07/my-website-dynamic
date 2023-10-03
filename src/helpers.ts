@@ -31,7 +31,13 @@ function isColorTheme(value: unknown): value is ColorTheme {
     );
 }
 
+function addMyFullname(str: string): string {
+    const myFullname = "Elton Lobo";
+    return str ? `${str} | ${myFullname}` : myFullname;
+}
+
 export const helpers = {
     formatClassName,
-    isColorTheme
+    isColorTheme,
+    addMyFullname
 };
