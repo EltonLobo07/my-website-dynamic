@@ -88,14 +88,9 @@ export default async function EducationPage(props: Props) {
                     </span>
                     <Anchor
                         target = "_blank"
-                        href = "https://www.sfit.ac.in/"
-                        className = {helpers.formatClassName(
-                            `
-                                uppercase
-                            `
-                        )}
+                        href = "https://mu.ac.in/"
                     >
-                        sfit
+                        University of Mumbai
                     </Anchor>
                 </p>
                 <Duration 
