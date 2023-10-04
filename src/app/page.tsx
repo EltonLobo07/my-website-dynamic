@@ -120,7 +120,7 @@ export default function RootPage() {
 				</p>
 				<Anchor
 					target = "_blank"
-					href = "#"
+					href = "/resume.pdf"
 					useRightArrow
 					className = {helpers.formatClassName(
 						`
