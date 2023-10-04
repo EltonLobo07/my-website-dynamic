@@ -169,7 +169,7 @@ export default function ExperiencePage() {
                                 `
                             )}
                         >
-                            Collaborated with several other developers to add &quot;Annual subscription&quot; feature to the company&apos;s dashboard.
+                            Collaborated with several other developers to add features to the company&apos;s dashboard.
                         </span>
                     </li>
                     <li
@@ -186,7 +186,24 @@ export default function ExperiencePage() {
                                 `
                             )}
                         >
-                            Fixed few minor dashboard related UI issues.
+                            Fixed a few minor dashboard related UI issues.
+                        </span>
+                    </li>
+                    <li
+                        className = {helpers.formatClassName(
+                            `
+                                ${commonListClasses}
+                            `
+                        )}
+                    >
+                        <span
+                            className = {helpers.formatClassName(
+                                `
+                                    ${commonSpanInsideLiClasses}
+                                `
+                            )}
+                        >
+                            Reviewed code written by other developers as part of a software development workflow.
                         </span>
                     </li>
                 </ul>
