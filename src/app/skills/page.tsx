@@ -1,18 +1,15 @@
 import { Metadata } from "next";
-import { twMerge } from "tailwind-merge";
 import { Information } from "~/components/Information";
 import { SkillsSubSection } from "~/components/SkillsSubSection";
 import { dataHelpers } from "~/data/dataHelpers";
 import { helpers } from "~/helpers";
 import { styles } from "~/styles";
 
-type Props = Omit<JSX.IntrinsicElements["div"], "ref" | "children"> & {searchParams: any};
-
 export const metadata: Metadata = {
     title: helpers.addMyFullname("Skills")
 };
 
-export default async function Skills(props: Props) {
+export default async function Skills() {
     const {
         languages,
         "libraries & frameworks": libsAndFrameworks,
@@ -20,15 +17,9 @@ export default async function Skills(props: Props) {
         databases
     } = await dataHelpers.getMySkills();
 
-    const {
-        searchParams,
-        ...otherProps
-    } = props;
-
     return (
         <div
-            {...otherProps}
-            className = {twMerge(
+            className = {
                 helpers.formatClassName(
                     `
                         ${styles.tw.pageRoot}
@@ -37,9 +28,7 @@ export default async function Skills(props: Props) {
                         gap-y-14
                         pb-[4px]
                     `
-                ),
-                otherProps.className
-            )}
+                )}
         >
             <div
                 className = {helpers.formatClassName(

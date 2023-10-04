@@ -1,4 +1,3 @@
-import { twMerge } from "tailwind-merge";
 import { helpers } from "~/helpers";
 import { styles } from "~/styles";
 import { Anchor } from "~/components/Anchor";
@@ -12,32 +11,20 @@ import { Certificate } from "~/components/icons/Certificate";
 import { Leetcode } from "~/components/Leetcode";
 import { Metadata } from "next";
 
-type Props = 
-    Omit<JSX.IntrinsicElements["div"], "ref" | "children"> & 
-    {
-        searchParams: any
-    };
-
 export const metadata: Metadata = {
     title: helpers.addMyFullname("Education")
 };
 
-export default async function EducationPage(props: Props) {
+export default async function EducationPage() {
     const onlineCourses = await dataHelpers.getOnlineCourses();
 
     const formalEducationSectionTitle = "formal";
     const onlineCoursesSectionTitle = "online courses taken";
     const relevantActivitySectionTitle = "relevant activity";
 
-    const { 
-        searchParams, 
-        ...otherProps
-    } = props;
-
     return (
         <div
-            {...otherProps}
-            className = {twMerge(
+            className = {
                 helpers.formatClassName(
                     `
                         relative
@@ -46,9 +33,7 @@ export default async function EducationPage(props: Props) {
                         flex-col
                         gap-y-14
                     `
-                ),
-                otherProps.className
-            )}
+                )}
         >
             <section
                 aria-label = {formalEducationSectionTitle}
