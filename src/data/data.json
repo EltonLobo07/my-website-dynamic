@@ -74,6 +74,12 @@
     ],
     "onlineCourses": [
         {
+            "name": "Advanced React with TypeScript",
+            "offeredBy": "Total TypeScript",
+            "certificateLink": "https://res.cloudinary.com/total-typescript/image/upload/v1705021102/certificate/88cb43d8-6493-4b54-810e-e280bb4dc896/advanced-react-with-typescript.png",
+            "background": "Ever since I started using TypeScript, it has become my go-to language for any web frontend development. As I had been writing web applications and websites using React, I decided to take this course to expand my TypeScript and React knowledge."
+        },
+        {
             "name": "CSS for JavaScript developers",
             "offeredBy": "Josh W Comeau",
             "certificateLink": "https://courses.joshwcomeau.com/certificate/64e371f6bd0b8302212b4133",
