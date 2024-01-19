@@ -1,321 +1,122 @@
-"use client";
-
-import { Anchor } from "~/components/Anchor";
-import { Duration } from "~/components/Duration";
-import { Tag } from "~/components/Tag";
-import { useColorThemeContext } from "~/custom-hooks/useColorThemeContext";
-import { helpers } from "~/helpers";
+import { twJoin } from "tailwind-merge";
+import ExperienceCard, { 
+    LinkContent, 
+    Work 
+} from "~/components/ExperienceCard";
 import { styles } from "~/styles";
+import { 
+    CustomDate, 
+    ReadonlyArrayAtLeastOne 
+} from "~/types";
+
+type Experience = {
+    workedAs: string,
+    workedAt: LinkContent,
+    from: CustomDate,
+    to: CustomDate,
+    tags: ReadonlyArrayAtLeastOne<string>,
+    relevantLinks?: ReadonlyArrayAtLeastOne<LinkContent>,
+    workDone: ReadonlyArrayAtLeastOne<Work>
+};
+
+const experienceHistory: ReadonlyArrayAtLeastOne<Experience> = [
+    {
+        workedAs: "SDE I - Frontend",
+        workedAt: {
+            displayText: "Samespace",
+            href: "https://www.samespace.com/"
+        },
+        workDone: [
+            {
+                id: "1",
+                content: "Worked with a UI designer and backend engineers to build an internal web application."
+            }
+        ],
+        from: "oct 2023",
+        to: "present",
+        tags: [
+            "TypeScript",
+            "React",
+            "GraphQL",
+            "HTML",
+            "CSS"
+        ]
+    },
+    {
+        workedAs: "software engineer",
+        workedAt: {
+            displayText: "CometChat",
+            href: "https://www.cometchat.com/"
+        },
+        from: "dec 2022",
+        to: "jul 2023",
+        tags: [
+            "TypeScript", 
+            "JavaScript", 
+            "React", 
+            "HTML", 
+            "CSS", 
+            "Redux"
+        ],
+        workDone: [
+            {
+                id: "1",
+                content: 
+                "Worked with the UI kit team to rebuild company's React UI kit which helps developers quickly build custom chat and calling web applications."
+            },
+            {
+                id: "2",
+                content: "Collaborated with many developers to add features to the company's dashboard."
+            },
+            {
+                id: "3",
+                content: "Fixed dashboard related UI issues."
+            },
+            {
+                id: "4",
+                content: "Reviewed code written by other developers."
+            }
+        ],
+        relevantLinks: [
+            {
+                displayText: "Chat UI kits v4 blog",
+                href: "https://www.cometchat.com/blog/chat-ui-kits-v4"
+            },
+            {
+                displayText: "React UI kit docs",
+                href: "https://www.cometchat.com/docs/v4/react-uikit/overview"
+            },
+            {
+                displayText: "CometChat dashboard",
+                href: "https://app.cometchat.com/signup"
+            }
+        ]
+    }
+];
+
+const lastWorkExpIdx = experienceHistory.length - 1;
 
 export default function ExperiencePage() {
-    const colorTheme = useColorThemeContext()[0];
-
-    const lightTheme = colorTheme === "light";
-    const projectsAndTasksCompleted = "projects & tasks completed";
-    const relevantLinksSectionTitle = "relevant links";
-    const techUsedSectionTitle = "tech used";
-    const commonHeadingClasses = helpers.formatClassName(
-        `
-            text-base tabAndUp:text-lg
-            font-semibold
-            capitalize
-            mb-1
-        `
-    );
-    const commonListClasses = helpers.formatClassName(
-        `
-            list-disc
-            ${
-                lightTheme
-                ? "text-argent"
-                : "text-squant"
-            }
-        `
-    );
-    const commonSpanInsideLiClasses = helpers.formatClassName(
-        `      
-            text-sm
-            ${
-                lightTheme
-                ? "text-cynical-black"
-                : "text-white-edgar"
-            }
-        `
-    );
-
     return (
-        <section
-            className = {helpers.formatClassName(
-                `
-                    ${styles.tw.pageRoot}
-                    relative
-                    flex
-                    flex-col
-                    gap-y-12
-                `
+        <ul
+            className = {twJoin(
+                styles.tw.pageRoot,
+                "flex flex-col gap-y-6"
             )}
         >
-            <div
-                className = {helpers.formatClassName(
-                    `
-                        mt-auto
-                        flex
-                        flex-col
-                        gap-y-1
-                    `
-                )}
-            >
-                <h3
-                    className = {helpers.formatClassName(
-                        `
-                            text-lg tabAndUp:text-xl
-                            font-bold
-                            flex
-                            flex-wrap
-                            gap-x-2
-                            items-baseline
-                        `
-                    )}
-                >
-                    <span
-                        className = {helpers.formatClassName(
-                            `
-                                capitalize
-                                text-wrap
-                            `
-                        )}
-                    >
-                        trainee software engineer
-                    </span>
-                    <span
-                        style = {styles.visuallyHidden}
-                    >
-                        at
-                    </span>
-                    <span
-                        aria-hidden
-                    >
-                        -
-                    </span>
-                    <Anchor
-                        target = "_blank"
-                        href = "https://www.cometchat.com/"
-                    >
-                        CometChat
-                    </Anchor>
-                </h3>
-                <Duration 
-                    $from = "dec 2022"
-                    $to = "jul 2023"
-                />
-            </div>
-            <section
-                aria-label = {projectsAndTasksCompleted}
-                className = {helpers.formatClassName(
-                    `
-                        mb-auto
-                    `
-                )}
-            >
-                <h4
-                    className = {helpers.formatClassName(
-                        `
-                            ${commonHeadingClasses}
-                        `
-                    )}
-                >
-                    {projectsAndTasksCompleted}
-                </h4>
-                <ul
-                    className = {helpers.formatClassName(
-                        `
-                            mb-6
-                            text-sm
-                            flex
-                            flex-col
-                            gap-y-1
-                            ml-2
-                        `
-                    )}
-                >
-                    <li
-                        className = {helpers.formatClassName(
-                            `
-                                ${commonListClasses}
-                            `
-                        )}
-                    >
-                        <span
-                            className = {helpers.formatClassName(
-                                `
-                                    ${commonSpanInsideLiClasses}
-                                `
-                            )}
-                        >
-                            Worked with the UI kit team to rebuild company&apos;s React UI kit which helps developers quickly build custom chat and calling web applications.
-                        </span>
-                    </li>
-                    <li
-                        className = {helpers.formatClassName(
-                            `
-                                ${commonListClasses}
-                            `
-                        )}
-                    >
-                        <span
-                            className = {helpers.formatClassName(
-                                `
-                                    ${commonSpanInsideLiClasses}
-                                `
-                            )}
-                        >
-                            Collaborated with several other developers to add features to the company&apos;s dashboard.
-                        </span>
-                    </li>
-                    <li
-                        className = {helpers.formatClassName(
-                            `
-                                ${commonListClasses}
-                            `
-                        )}
-                    >
-                        <span
-                            className = {helpers.formatClassName(
-                                `
-                                    ${commonSpanInsideLiClasses}
-                                `
-                            )}
-                        >
-                            Fixed a few minor dashboard related UI issues.
-                        </span>
-                    </li>
-                    <li
-                        className = {helpers.formatClassName(
-                            `
-                                ${commonListClasses}
-                            `
-                        )}
-                    >
-                        <span
-                            className = {helpers.formatClassName(
-                                `
-                                    ${commonSpanInsideLiClasses}
-                                `
-                            )}
-                        >
-                            Reviewed code written by other developers as part of a software development workflow.
-                        </span>
-                    </li>
-                </ul>
-                <section
-                    aria-label = {relevantLinksSectionTitle}
-                    className = {helpers.formatClassName(
-                        `
-                            mb-6
-                        `
-                    )}
-                >
-                    <h5
-                        className = {helpers.formatClassName(
-                            `
-                                ${commonHeadingClasses}
-                            `
-                        )}
-                    >
-                        {relevantLinksSectionTitle}
-                    </h5>
-                    <ul
-                        className = {helpers.formatClassName(
-                            `
-                                flex
-                                flex-wrap
-                                gap-x-6
-                                gap-y-1
-                                text-sm
-                                font-semibold
-                            `
-                        )}
-                    >
-                        <li>
-                            <Anchor
-                                target = "_blank"
-                                href = "https://www.cometchat.com/blog/chat-ui-kits-v4"
-                            >
-                                Chat UI kits v4 blog
-                            </Anchor>
-                        </li>
-                        <li>
-                            <Anchor
-                                target = "_blank"
-                                href = "https://www.cometchat.com/docs/v4/react-uikit/overview"
-                            >
-                                React UI kit docs
-                            </Anchor>
-                        </li>
-                        <li>
-                            <Anchor
-                                target = "_blank"
-                                href = "https://app.cometchat.com/signup"
-                            >
-                                CometChat dashboard
-                            </Anchor>
-                        </li>
-                    </ul>
-                </section>
-                <section
-                    aria-label = {techUsedSectionTitle}
-                >
-                    <h5
-                        className = {helpers.formatClassName(
-                            `
-                                ${commonHeadingClasses}
-                            `
-                        )}
-                    >
-                        {techUsedSectionTitle}
-                    </h5>
-                    <ul
-                        className = {helpers.formatClassName(
-                            `
-                                flex
-                                flex-wrap
-                                gap-2
-                            `
-                        )}
-                    >
-                        <li>
-                            <Tag>
-                                TypeScript
-                            </Tag>
-                        </li>
-                        <li>
-                            <Tag>
-                                JavaScript
-                            </Tag>
-                        </li>
-                        <li>
-                            <Tag>
-                                React
-                            </Tag>
-                        </li>
-                        <li>
-                            <Tag>
-                                HTML
-                            </Tag>
-                        </li>
-                        <li>
-                            <Tag>
-                                CSS
-                            </Tag>
-                        </li>
-                        <li>
-                            <Tag>
-                                Redux
-                            </Tag>
-                        </li>
-                    </ul>
-                </section>
-            </section>
-        </section>
+            {experienceHistory.map((workExp, workExpIdx) => (
+                <ExperienceCard 
+                    key = {workExp.workedAt.href}
+                    addBottomBorder = {workExpIdx !== lastWorkExpIdx}
+                    workedAs = {workExp.workedAs}
+                    workedAt = {workExp.workedAt}
+                    workDone = {workExp.workDone}
+                    from = {workExp.from}
+                    to = {workExp.to}
+                    tags = {workExp.tags}
+                    relevantLinks = {workExp.relevantLinks}
+                />    
+            ))}
+        </ul>
     );
 }
