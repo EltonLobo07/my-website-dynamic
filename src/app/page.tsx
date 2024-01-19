@@ -109,12 +109,19 @@ export default function RootPage() {
 						`
 					)}
 				>
-					I&apos;m a software developer from India who spends most of the time focusing on the front end of a software product. I&apos;m currently unemployed and am looking to join a team as a software developer. I have mainly written web apps and websites using 
+					I&apos;m a software developer from Mumbai, India. I&apos;m currently looking to join a team as a software developer. I have mainly written web apps and websites using 
 					<Anchor
 						target = "_blank"
 						href = "https://react.dev/"
 					>
 						React
+					</Anchor>
+					and 
+					<Anchor
+						target = "_blank"
+						href = "https://www.typescriptlang.org/"
+					>
+						TypeScript
 					</Anchor>
 					. I am motivated to work on problems that require software developers to create efficient technical solutions using technology suited for the issue at hand.
 				</p>
